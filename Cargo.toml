@@ -1,0 +1,21 @@
+[package]
+name = "apk-builder"
+version = "0.1.0"
+edition = "2021"
+description = "Turn any HTML website into an installable Android APK."
+authors = ["RohaM"]
+license = "MIT"
+repository = "https://github.com/JustRohams/APK-Builder"
+readme = "README.md"
+keywords = ["apk", "android", "html", "webview", "builder"]
+categories = ["command-line-utilities", "development-tools::build-utils"]
+
+# No third-party dependencies on purpose: fast compile, tiny binary.
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

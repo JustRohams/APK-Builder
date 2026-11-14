@@ -1,0 +1,6 @@
+/target
+/output
+Cargo.lock.bak
+*.apk
+.idea/
+.vscode/
